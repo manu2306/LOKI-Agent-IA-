@@ -38,15 +38,12 @@ cd LOKI-Agent-IA-
 2. Instala dependencias:
 npm install
 
-3. Configura el archivo .env:
-cp .env.example .env
+3. Edita config.js con los datos del cliente.
 
-4. Edita config.js con los datos del cliente.
-
-5. Inicia Loki:
+4. Inicia Loki:
 pm2 start index.js --name loki
 
-6. Escanea el QR con WhatsApp.
+5. Escanea el QR con WhatsApp.
 
 ---
 
@@ -78,7 +75,7 @@ loki/
 ├── index.js            # Bot principal
 ├── config.js           # Configuracion del cliente
 ├── responses.js        # Mensajes predefinidos
-├── utils.js            # Funciones auxiliares
+├── qualification.js    # Calificacion de leads (opcional)
 ├── sendCalendlyLink.js # Integracion con Calendly (opcional)
 └── README.md
 
