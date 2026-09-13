@@ -1,17 +1,8 @@
 const config = require('./config');
 
-// Mensaje de bienvenida personalizado
+// Mensaje de bienvenida
 async function sendWelcome(client, number) {
-    await client.sendMessage(number, config.MENSAJE_BIENVENIDA);
+    await client.sendMessage(number, `👋 ¡Hola! Soy Loki, el asistente virtual de ${config.NOMBRE_EMPRESA}. ¿En qué puedo ayudarte hoy?`);
 }
 
-// Menú de opciones
-async function sendMenu(client, number) {
-    const menu = config.MENU_OPCIONES.join('\n');
-    await client.sendMessage(number, menu);
-}
-
-module.exports = {
-    sendWelcome,
-    sendMenu
-};
+module.exports = { sendWelcome };
